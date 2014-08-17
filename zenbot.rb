@@ -19,12 +19,13 @@ tweet_array = []
 d = rand(1200).to_i
 
 #Load text file based on RNG. Only one array needed here.
-tweet_array = IO.readlines('/home/chen/chenbot/zensay.txt') if d % 6 == 0
-tweet_array = IO.readlines('/home/chen/chenbot/kempo.txt') if d % 6 == 1
-tweet_array = IO.readlines('/home/chen/chenbot/highlights.txt') if d % 6 == 2
-tweet_array = IO.readlines('/home/chen/chenbot/quotes.txt') if d % 6 == 3
-tweet_array = IO.readlines('/home/chen/chenbot/social.txt') if d % 6 == 4
-tweet_array = IO.readlines('/home/chen/chenbot/koans.txt') if d % 6 == 5
+tweet_array = IO.readlines('/home/chen/cb_backup/zensay.txt') if d % 7 == 0
+tweet_array = IO.readlines('/home/chen/cb_backup/kempo.txt') if d % 7 == 1
+tweet_array = IO.readlines('/home/chen/cb_backup/highlights.txt') if d % 7 == 2
+tweet_array = IO.readlines('/home/chen/cb_backup/quotes.txt') if d % 7 == 3
+tweet_array = IO.readlines('/home/chen/cb_backup/social.txt') if d % 7 == 4
+tweet_array = IO.readlines('/home/chen/cb_backup/koans.txt') if d % 7 == 5
+tweet_array = IO.readlines('/home/chen/cb_backup/cons.txt') if d % 7 == 6
 
 #Make the new array as big as the loaded textfile and grab a random num  based on that length
 r = rand(tweet_array.length).to_i
